@@ -29,7 +29,7 @@ jobs:
           --branch=${GITHUB_REF#refs/heads/}
           flux create kustomization flux-system \
           --source=flux-system \
-          --path=./clusters/home
+          --path=./clusters/prod
       - name: Verify cluster reconciliation
         run: |
           kubectl -n flux-system wait kustomization/infrastructure --for=condition=ready --timeout=5m
