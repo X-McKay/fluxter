@@ -1,0 +1,33 @@
+!/bin/bash 
+set -e
+
+asdf install 
+poetry install
+
+# function asdf_add_required_plugins() {
+#   local tool_versions_file="${1}"
+#   if test -z "${tool_versions_file}"; then
+#     tool_versions_file="${HOME}/.tool-versions"
+#   fi 
+#   plugins=$(awk '{print $1}' < "${tool_versions_file}")
+#   for plugin in $plugins; do
+#     if ! asdf list "${plugin}" > /dev/null 2>&1; then
+#       asdf plugin-add "${plugin}"
+#     fi
+#   done
+# }
+
+# # function install_asdf_plugins() {
+# #   asdf plugin-add yq https://github.com/sudermanjr/asdf-yq.git
+# #   asdf plugin-add flux2 https://github.com/tablexi/asdf-flux2.git
+# #   asdf plugin-add kubectl https://github.com/asdf-community/asdf-kubectl.git
+# #   asdf plugin add kubeconform https://github.com/lirlia/asdf-kubeconform.git
+# #   asdf plugin add shellcheck https://github.com/luizm/asdf-shellcheck.git
+# #   asdf plugin add shfmt https://github.com/luizm/asdf-shfmt.git
+# #   asdf plugin-add kustomize https://github.com/Banno/asdf-kustomize.git
+# # }
+
+# # install_asdf_plugins
+
+# asdf_add_required_plugins
+# asdf install
