@@ -8,3 +8,4 @@ kustomize 4.5.7
 helm 3.9.3
 python 3.10.5
 poetry 1.1.14
+golang 1.18.4
