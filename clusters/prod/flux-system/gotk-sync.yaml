@@ -24,4 +24,8 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
+<<<<<<< HEAD
     name: flux-system
+=======
+    name: flux-system
+>>>>>>> dev

@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "k3s-ansible"
+version = "0.1.0"
+description = ""
+authors = ["X-McKay <aldmckay@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ansible = "^5.7.1"
+ansible-core = "^2.12.5"
+cryptography = "^3.4.8"
+jinja2 = "^2.11.3"
+netaddr = "^0.7.19"
+pbr = "^5.4.4"
+jmespath = "^0.9.5"
+MarkupSafe = "^1.1.1"
+"ruamel.yaml" = "0.16.10"
+"ruamel.yaml.clib" = "0.2.6"
+ara = {extras = ["server"], version = "^1.5.8"}
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

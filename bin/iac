@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+export TF_VAR_github_token="replace.w.token"
+
+# Initialize terraform
+terraform -chdir=./terraform/flux init
