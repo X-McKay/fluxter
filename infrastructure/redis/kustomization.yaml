@@ -4,7 +4,6 @@ namespace: redis
 resources:
   - namespace.yaml
   - release.yaml
-  - redis-auth.yaml
 configMapGenerator:
   - name: redis-values
     files:
