@@ -1,4 +1,8 @@
-# fluxter
+# Fluxter
+
+## Personal playground for Flux Kubernetes testing
+
+**I would not advise anyone to use anything in here.**
 ## Repository structure
 
 The Git repository contains the following top directories:
@@ -10,21 +14,19 @@ The Git repository contains the following top directories:
 ```
 ├── apps
 │   ├── base
-│   ├── production 
-│   └── staging
+│   ├── prod
 ├── infrastructure
 │   ├── nginx
 │   ├── redis
 │   └── sources
 └── clusters
-    ├── production
-    └── staging
+    ├── prod
 ```
 
 The apps configuration is structured into:
 
 - **apps/base/** dir contains namespaces and Helm release definitions
-- **apps/production/** dir contains the production Helm release values
+- **apps/prod/** dir contains the prod Helm release values
 - **apps/staging/** dir contains the staging values
 
 ```
@@ -90,7 +92,7 @@ spec:
 Note that with ` version: ">=1.0.0-alpha"` we configure Flux to automatically upgrade
 the `HelmRelease` to the latest chart version including alpha, beta and pre-releases.
 
-In **apps/production/** dir we have a Kustomize patch with the production specific values:
+In **apps/prod/** dir we have a Kustomize patch with the production specific values:
 
 ```yaml
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
@@ -152,7 +154,7 @@ spec:
 Note that with ` interval: 5m` we configure Flux to pull the Helm repository index every five minutes.
 If the index contains a new chart version that matches a `HelmRelease` semver range, Flux will upgrade the release.
 
-## Bootstrap staging and production
+## Bootstrap staging and prod
 
 The clusters dir contains the Flux configuration:
 
