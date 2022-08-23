@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 # fluxter
-=======
 ## Repository structure
 
 The Git repository contains the following top directories:
@@ -200,4 +198,3 @@ spec:
   path: ./infrastructure
   prune: true
 ```
->>>>>>> dev
